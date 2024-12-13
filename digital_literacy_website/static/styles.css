@@ -1,0 +1,58 @@
+/* HEADER */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #ffffff; /* Полностью белый фон */
+}
+
+.header__img {
+    width: 50px; /* Установите нужный размер для логотипа */
+    height: auto;
+    margin-right: 10px; /* Отступ справа от изображения */
+}
+
+.fs-4 {
+    font-weight: bold; /* Убедитесь, что текст жирный */
+}
+
+.nav-pills {
+    display: flex; /* Используем flexbox для выравнивания кнопок */
+    align-items: center; /* Центрируем кнопки по вертикали */
+}
+
+.nav-item {
+    margin-right: 10px; /* Отступы между кнопками */
+}
+
+.nav-link {
+    color: #ff0000; /* Красный цвет текста для кнопок */
+}
+
+.nav-link.active {
+    font-weight: bold; /* Выделение активной ссылки */
+    color: #b30000; /* Темно-красный цвет для активной ссылки */
+}
+
+.nav-link:hover {
+    color: #cc0000; /* Цвет при наведении на ссылку */
+}
+
+h1 {
+    color: #333; /* Цвет заголовка */
+    text-align: center; /* Центрирование заголовка */
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

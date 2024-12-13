@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img class="header__img" src="{{ url_for('static', filename='images/law.png') }}" alt="law">
+                <span class="fs-4 ms-2 fw-bold">Главная страница</span> <!-- Добавлен класс fw-bold для жирного шрифта -->
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}" class="btn btn-danger rounded-pill px-3 me-2 fw-bold" role="button">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('about') }}" class="btn btn-danger rounded-pill px-3 me-2 fw-bold" role="button">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('survey') }}" class="btn btn-danger rounded-pill px-3 me-2 fw-bold" role="button">Опрос</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('tips') }}" class="btn btn-danger rounded-pill px-3 fw-bold" role="button">Памятки</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-6 px-0">
+          <h1 class="display-4 fw-bold">Быть грамотным в интернете - превыше всего!</h1>
+          <p class="lead my-3">Пройдите короткий опрос и узнайте, насколько вы осведомлены о конфиденциальности и правилах поведения в Интернете</p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary-emphasis">24.11.2024</strong>
+                    <h3 class="mb-0">Вы знали?</h3>
+                    <p class="card-text mb-auto">За первое полугодие 2024 года в России скомпрометировано 986 млн строк персональных данных (ПД), что на 33,8% больше, чем в первом полугодии 2023 года.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">18.11.2024</strong>
+                    <h3 class="mb-0">Не повезло</h3>
+                    <p class="mb-auto">Стример случайно показал seed-фразу от криптокошелька во время трансляции, что стоило ему 10 млн рублей. За пару минут средства были выведены злоумышленниками.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-8">
+          <article class="blog-post">
+            <h2 class="display-5 link-body-emphasis mb-1">Утечке данных и обману могут быть подвержены люди разных возрастов.</h2>
+            <p>Московская пенсионерка за год общения с телефонными мошенниками передала курьерам от них почти 90 млн руб., сообщает столичная прокуратура.
+
+    «Осознав, что стала жертвой обмана, пенсионерка обратилась в правоохранительные органы», — говорится в публикации.
+            </p>
+            <hr>
+            <p>По информации ведомства, в ноябре 2023 года 86-летней женщине позвонил неизвестный, представился следователем и заявил, что сбережения пенсионерки готовятся похитить мошенники, — поэтому деньги якобы надо перевести на безопасные счета.</p>
+            <h2>И таких случаев с каждым днем все больше и больше по всему миру!</h2>
+            <p>Почему же это происходит?</p>
+            <h3>Вот вам несколько фактов:</h3>
+            <ul>
+              <li>«Сильный» пароль на самом деле может предотвратить большинство атак, но многие люди игнорируют это.</li>
+              <li>Многие люди верят фейковой информации, распространяемой в Интернете ежесекундно. С развитием Deepfake-приложений ситуация только усугубилась.</li>
+              <li>Интернет не анонимен. Даже скрыв свое настоящее имя злоумышленники могут добраться до ваших личных данных.</li>
+            </ul>
+            </dl>
+            <h1>Что же мы предлагаем?</h1>
+            <p>Все очень просто! Пройдите опрос и узнать Ваш уровень осведомленности о безопасности в Интернете, а также узнать много полезного о конфиденциальности и правильном поведении в Интернете.</p>
+            <ul>
+                <li>Проверьте, насколько угроза быть взломанным/обманутым - <strong>это не про вас!</strong></li>
+                <li><strong>Расширьте</strong> свои знания о кибербезопасности.</li>
+                <li><strong>Обезопасьте</strong> свои данные от кражи злоумышленниками.</li>
+                <li><strong>Распространите</strong> наш проект среди друзей и близких, <strong>обезопасим</strong> как можно больше людей вместе!</li>
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <div class="p-4 mb-3 bg-body-tertiary rounded">
+              <h4 class="fst-italic">Идея проекта</h4>
+              <p class="mb-0">Используя наши знания и методы обеспечения безопасности в Интернете, мы решили создать короткий тест для широких масс, а также памятки для расширения своих знаний. Цифровой ликбез - наше все!</p>
+            </div>
+
+            <div>
+              <h4 class="fst-italic">Последние новости</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <image href="https://i1.sndcdn.com/artworks-Ger8Q3L4m8LqZVvS-IAhZng-t1080x1080.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"/></svg>
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">Конфликт Лебедева и Мизулиной</h6>
+                        <pre></pre><p>Высказывания Артемия в ее адрес было фатальным.</p>
+                      <small class="text-body-secondary">November 20, 2024</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <image href="https://media.istockphoto.com/id/1386179512/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D1%85%D0%B0%D0%BA%D0%B5%D1%80-%D0%BA%D1%80%D0%B0%D0%B4%D0%B5%D1%82-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA%D0%B0.jpg?s=612x612&w=0&k=20&c=Gb8X4Xrxfw37Tvz8Y3nfmBeAIXiqvG-bHV27Hlqgnf4=" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"/></svg>
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">Будьте бдительны!</h6>
+                        <pre></pre><p>"Мегафон": россиян стали чаще атаковать банковскими мобильными троянами</p>
+                      <small class="text-body-secondary">October 24, 2024</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                    <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <image href="https://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2024-11/TASS_68735061.jpg?itok=Yt_IYO0U" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"/></svg>
+                    <div class="col-lg-8">
+                      <h6 class="mb-0">ВТБ предупредил о новой схеме мошенников в WhatsApp</h6>
+                       <pre></pre><p>В России выросло число случаев мошенничества, связанных с установкой программ удаленного доступа — вируса SpyMax через мессенджер WhatsApp</p>
+                      <small class="text-body-secondary">September 29, 2024</small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+
+    </main>
+
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <img class="header__img" src="{{ url_for('static', filename='images/law.png') }}" alt="law">
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Digital literacy</span>
+        </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="https://t.me/digitallliteracy" target="_blank">
+                        <img src="{{ url_for('static', filename='images/teleg.png') }}" alt="Telegram" width="24" height="22">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+
+
+</body>
+</html>
